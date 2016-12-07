@@ -1,0 +1,15 @@
+apply plugin: 'scala'
+apply plugin: 'eclipse'
+
+repositories {
+	jcenter()
+	maven {
+		name 'stephenjudkins'
+		url 'http://dl.bintray.com/stephenjudkins/maven'
+	}
+}
+
+dependencies {
+	compile 'org.scala-lang:scala-library:2.11.8'
+	compile 'ps.tricerato:pureimage_2.11:0.1.2'
+}
