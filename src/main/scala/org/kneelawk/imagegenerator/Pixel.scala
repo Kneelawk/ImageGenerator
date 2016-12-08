@@ -8,5 +8,21 @@ case class Pixel(value: Int) {
 }
 
 object Pixel {
-  
+  def apply(gray: Int, alpha: Int) = new Pixel(
+    ((gray & 0xFF) << 0x18) |
+      ((gray & 0xFF) << 0x10) |
+      ((gray & 0xFF) << 0x08) |
+      (alpha & 0xFF));
+
+  def apply(red: Int, green: Int, blue: Int) = new Pixel(
+    ((red & 0xFF) << 0x18) |
+      ((green & 0xFF) << 0x10) |
+      ((blue & 0xFF) << 0x08) |
+      0xFF);
+
+  def apply(red: Int, green: Int, blue: Int, alpha: Int) = new Pixel(
+    ((red & 0xFF) << 0x18) |
+      ((green & 0xFF) << 0x10) |
+      ((blue & 0xFF) << 0x08) |
+      (alpha & 0xFF));
 }
