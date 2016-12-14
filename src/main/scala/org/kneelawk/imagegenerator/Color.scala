@@ -1,6 +1,6 @@
 package org.kneelawk.imagegenerator
 
-case class Pixel(value: Int) {
+case class Color(value: Int) {
   def this(gray: Int, alpha: Int) = this(
     ((gray & 0xFF) << 0x18) |
       ((gray & 0xFF) << 0x10) |
