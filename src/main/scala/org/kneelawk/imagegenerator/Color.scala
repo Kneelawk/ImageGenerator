@@ -24,3 +24,9 @@ case class Color(value: Int) {
   def blue: Byte = ((value >> 0x08) & 0xFF).toByte
   def alpha: Byte = ((value >> 0x00) & 0xFF).toByte
 }
+
+object Color {
+  implicit def colorFromTuple(t: (Int, Int)) = new Color(t._1, t._2)
+  implicit def colorFromTuple(t: (Int, Int, Int)) = new Color(t._1, t._2, t._3)
+  implicit def colorFromTuple(t: (Int, Int, Int, Int)) = new Color(t._1, t._2, t._3, t._4)
+}
