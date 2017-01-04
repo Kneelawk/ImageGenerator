@@ -11,5 +11,5 @@ class ImageReader extends ImageSource {
     image = ImageIO.read(stream)
   }
   
-  def apply(x: Int, y: Int) = new Color(image.getRGB(x, y))
+  def apply(x: Float, y: Float) = new Color(image.getRGB(x.floor.toInt, y.floor.toInt))
 }

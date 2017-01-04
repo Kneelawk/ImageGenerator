@@ -1,5 +1,5 @@
 package org.kneelawk.imagegenerator
 
 trait ImageSink {
-  def apply(x: Int, y: Int, pixel: Color)
+  def apply(x: Float, y: Float, pixel: Color)
 }
