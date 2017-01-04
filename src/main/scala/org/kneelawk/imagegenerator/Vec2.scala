@@ -23,3 +23,5 @@ case class Vec2f(x: Float, y: Float) {
     new Rect(minx, miny, maxx - minx, maxy - miny)
   }
 }
+
+case class Vec2i(x: Int, y: Int)
